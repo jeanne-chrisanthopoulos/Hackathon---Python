@@ -1,0 +1,24 @@
+https://www.hackerrank.com/challenges/write-a-function/problem?isFullScreen=true
+
+Assessing Leap Years:
+In the Gregorian calendar, three conditions are used to identify leap years:
+  The year can be evenly divided by 4, is a leap year, unless:
+  The year can be evenly divided by 100, it is NOT a leap year, unless:
+  The year is also evenly divisible by 400. Then it is a leap year.
+
+constrains year >=1900 and <= 10^5
+
+def is_leap(year):
+    if year % 4 == 0:  # Checks if the year is evenly divisible by 4, if yes leap
+        if year % 100 == 0:  # Checks if the year is evenly divisible by 100, if yes NOT leap
+            if year % 400 == 0:  # Checks if the year is evenly divisible by 400, if yes leap
+                return True  # If divisible by 400, it's a leap year
+            else:  # If divisible by 100 but not by 400, it's not a leap year
+                return False
+        else:  # If divisible by 4 but not by 100, it's a leap year
+            return True
+    else:  # If not divisible by 4, it's not a leap year
+        return False
+
+year = int(input())
+print(is_leap(year))
