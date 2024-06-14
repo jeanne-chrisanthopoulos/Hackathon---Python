@@ -1,0 +1,14 @@
+https://www.hackerrank.com/challenges/python-loops/problem?isFullScreen=true
+
+The provided code stub reads and integer, n , from STDIN. For all non-negative integers i<n, print i^2.
+The first and only line contains the integer, i^2. 
+
+#use input(), whatever the user inputs is returned as a string. 
+#use int() to read an integer
+
+n = int(input()) 
+
+#for loop iterates 'i' over the range of numbers from 0 to n-1
+#The range() function generates a sequence of numbers starting from 0 up to (but not including) n.
+for i in range(n): 
+    print(i ** 2) 
